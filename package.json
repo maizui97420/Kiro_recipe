@@ -1,0 +1,47 @@
+{
+  "name": "family-meal-wishlist",
+  "version": "1.0.0",
+  "description": "家庭餐食愿望清单微信小程序",
+  "main": "app.js",
+  "scripts": {
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage",
+    "build:dev": "node scripts/build.js build development",
+    "build:prod": "node scripts/build.js build production",
+    "build:clean": "node scripts/build.js clean",
+    "build:info": "node scripts/build.js info",
+    "deploy:dev": "npm run build:dev && node scripts/deploy.js development",
+    "deploy:prod": "npm run build:prod && node scripts/deploy.js production",
+    "predeploy:prod": "npm test"
+  },
+  "keywords": [
+    "wechat",
+    "miniprogram",
+    "family",
+    "meal",
+    "wishlist"
+  ],
+  "author": "Family Meal Wishlist Team",
+  "license": "MIT",
+  "devDependencies": {
+    "jest": "^29.0.0",
+    "fast-check": "^3.0.0"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "testMatch": [
+      "**/tests/**/*.test.js"
+    ],
+    "collectCoverageFrom": [
+      "pages/**/*.js",
+      "cloudfunctions/**/*.js",
+      "!**/node_modules/**"
+    ],
+    "coverageReporters": [
+      "text",
+      "lcov",
+      "html"
+    ]
+  }
+}

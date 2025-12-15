@@ -1,0 +1,55 @@
+{
+  "pages": [
+    "pages/wishlist/wishlist",
+    "pages/dish-detail/dish-detail",
+    "pages/login/login",
+    "pages/profile/profile"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#FF8C42",
+    "navigationBarTitleText": "家庭餐食愿望清单",
+    "navigationBarTextStyle": "white",
+    "backgroundColor": "#FFF8F0",
+    "enablePullDownRefresh": true,
+    "onReachBottomDistance": 50
+  },
+  "tabBar": {
+    "color": "#999999",
+    "selectedColor": "#FF8C42",
+    "backgroundColor": "#ffffff",
+    "borderStyle": "black",
+    "position": "bottom",
+    "list": [
+      {
+        "pagePath": "pages/wishlist/wishlist",
+        "text": "愿望清单",
+        "iconPath": "images/wishlist.png",
+        "selectedIconPath": "images/wishlist-active.png"
+      },
+      {
+        "pagePath": "pages/profile/profile",
+        "text": "个人中心",
+        "iconPath": "images/profile.png",
+        "selectedIconPath": "images/profile-active.png"
+      }
+    ]
+  },
+  "networkTimeout": {
+    "request": 10000,
+    "downloadFile": 10000
+  },
+  "debug": false,
+  "cloud": true,
+
+  "requiredBackgroundModes": [],
+  "plugins": {},
+  "preloadRule": {
+    "pages/wishlist/wishlist": {
+      "network": "all",
+      "packages": ["__APP__"]
+    }
+  },
+  "lazyCodeLoading": "requiredComponents",
+  "sitemapLocation": "sitemap.json"
+}
